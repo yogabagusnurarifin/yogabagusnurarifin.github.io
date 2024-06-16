@@ -1,0 +1,31 @@
+/* .jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+
+#projects {
+  background-color: #e2edff;
+} */
+
+section {
+  padding-top: 5rem;
+}
+
+.skill-icons .skill-icon {
+  overflow: hidden; /* Mengatasi overflow dari gambar */
+  margin: 0 auto; /* Pusatkan ikon */
+}
+
+.skill-icons img {
+  width: 30%; /* Biar gambar fill dalam lingkaran */
+  height: auto; /* Sesuaikan proporsi gambar */
+}
+
+.skill-icons img:hover {
+  transform: scale(1.1);
+}
+
+.skill-icons p {
+  margin-top: 8px;
+  font-family: "Arkeo BT W01 Condensed", sans-serif;
+}
