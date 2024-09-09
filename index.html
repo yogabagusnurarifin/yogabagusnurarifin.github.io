@@ -1,414 +1,1302 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="dist/css/style-minify.css" rel="stylesheet" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+            rel="stylesheet"
+        />
 
-    <!-- My Style -->
-    <link href="css/style.css" rel="stylesheet" />
-
-    <title>Web Profile | Yoga Bagus Nur Arifin</title>
-  </head>
-
-  <body id="home">
-    <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top"
-      data-bs-theme="dark"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#">Yoga Bagus Nur Arifin</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Work Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <!-- <li class="nav-item">
-              <button
-                id="toggle-background"
-                class="btn btn-outline-secondary ms-3 rounded-circle"
-              >
-                <svg
-                  class="slider"
-                  viewBox="0 0 512 512"
-                  height="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+        <script>
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            if (
+                localStorage.getItem("color-theme") === "dark" ||
+                (!("color-theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+        </script>
+    </head>
+    <body>
+        <header class="">
+            <!-- Navbar -->
+            <nav class="bg-white border-gray-200 dark:bg-gray-900">
+                <div
+                    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
                 >
-                  <path
-                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"
-                  ></path>
-                </svg>
-              </button>
-            </li> -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Akhir navbar -->
+                    <a
+                        href="#"
+                        class="flex items-center space-x-3 rtl:space-x-reverse"
+                    >
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                            >Yoga Bagus</span
+                        >
+                    </a>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <img
-        src="img/1.png"
-        alt="Yoga Bagus"
-        width="200"
-        class="rounded-circle img-thumbnail"
-      />
-      <h1 class="display-4">Yoga Bagus Nur Arifin</h1>
-      <p class="lead">S1 Teknik Informatika</p>
-    </section>
-    <!-- Akhir Jumbotron -->
+                    <button
+                        data-collapse-toggle="navbar-default"
+                        type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Open main menu</span>
+                        <svg
+                            class="w-5 h-5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 14"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15"
+                            />
+                        </svg>
+                    </button>
+                    <div
+                        class="hidden w-full md:block md:w-auto"
+                        id="navbar-default"
+                    >
+                        <ul
+                            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                        >
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                    aria-current="page"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#work-experience"
+                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                    >Work Experience</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#contact"
+                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="justify-content-center fs-5 text-center">
-          <p>
-            Saya lulusan S1 Teknik Informaka dari Universitas PGRI Madiun.
-            Memikili kompetensi terkait Hardware, Software, Website, Data
-            Management, Domain, Hosting. saya siap bekerja dibawah tekanan untuk
-            memenuhi target perusahaan.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir About -->
+            <!-- End Navbar -->
+        </header>
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-4">
-          <div class="col">
-            <h2>Work Experience</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4 col-md-2 mb-3">
-            <span>Juni 2018 - Agustus 2018</span>
-          </div>
-          <div class="col-8 col-md-4 mb-3">
-            <h5>Karyawan</h5>
-            <p>PT Olean Permata Telematika</p>
-            <ul>
-              <li>Melakukan pengetatan besi atau holo.</li>
-              <li>Melakukan pemasangan kabel speaker</li>
-              <li>Melakukan pemasangan jaringan CCTV dan Internet</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4 col-md-2 mb-3">
-            <span>Juni 2021 - November 2021</span>
-          </div>
-          <div class="col-8 col-md-4 mb-3">
-            <h5>Pramuniaga</h5>
-            <p>Pom Mini ADF Petro</p>
-            <ul>
-              <li>Melayani konsumen dalam pengisian BBM</li>
-              <li>Melayani konsumen dalam pembelian pulsa, token, rokok</li>
-              <li>Melakukan input laporan hasil penjualan</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4 col-md-2 mb-3">
-            <span>November 2021 - Desember 2021</span>
-          </div>
-          <div class="col-8 col-md-4 mb-3">
-            <h5>Magang</h5>
-            <p>Dinas Sosial Kabupaten Madiun</p>
-            <ul>
-              <li>
-                Melakukan perancangan sistem dalam membuat website sesuai
-                keinginan Dinas
-              </li>
-              <li>
-                Pembuatan website dalam menunjang keefektifitasan kinerja
-                petugas
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir Projects -->
-
-    <!--  -->
-    <section id="skills">
-      <div class="container text-center">
-        <div class="row mb-3">
-          <div class="col">
-            <h2>Skills</h2>
-          </div>
-        </div>
-        <div class="justify-content-center row skill-icons">
-          <!-- Programming Languages -->
-          <p>Programming Languages</p>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/html-5.png"
-              alt="HTML Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>HTML</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/css3.png"
-              alt="CSS Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>CSS</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/javascript.png"
-              alt="JavaScript Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>JavaScript</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/php.png"
-              alt="PHP Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>PHP</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=40669&format=png&color=000000"
-              alt="C++ Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>C++</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=114474&format=png&color=000000"
-              alt="Json Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Json</p>
-          </div>
-
-          <!-- Databases -->
-          <p>Databases</p>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=UFXRpPFebwa2&format=png&color=000000"
-              alt="Mysql Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>MySQL</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=38561&format=png&color=000000"
-              alt="PostgreSql Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>PostgreSql</p>
-          </div>
-
-          <!-- Frameworks and Libraries -->
-          <p>Frameworks and Libraries</p>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=100&id=r4UrHt1gLC2t&format=png&color=000000"
-              width="50"
-              alt="CodeIgniter Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>CodeIgniter</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/fluency/48/laravel.png"
-              alt="Laravel Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Laravel</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=x7XMNGh2vdqA&format=png&color=000000"
-              alt="Tailwinds Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Tailwinds</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/nodejs.png"
-              alt="Node.js Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Node.js</p>
-          </div>
-
-          <!-- Tools -->
-          <p>Tools</p>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/color/48/000000/wordpress.png"
-              alt="WordPress Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>WordPress</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=20906&format=png&color=000000"
-              alt="Git Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Git</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=48455&format=png&color=000000"
-              alt="Visual Code Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Visual Code</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=6RHskkZGRABM&format=png&color=000000"
-              alt="Sublime Text Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Sublime Text</p>
-          </div>
-          <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
-            <img
-              src="https://img.icons8.com/?size=48&id=AZOZNnY73haj&format=png&color=000000"
-              alt="Github Icon"
-              class="img-fluid skill-icon"
-            />
-            <p>Github</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  -->
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Contact</h2>
-            <div class="contact-info">
-              <p>
-                <strong>WhatsApp:</strong>
-                <a href="tel:+6285784442013">+6285784442013</a>
-              </p>
-              <p>
-                <strong>Email:</strong>
-                <a href="mailto:yogabagusnurarifin@gmail.com"
-                  >yogabagusnurarifin@gmail.com</a
+        <!-- Home Section -->
+        <section id="home" class="bg-slate-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div
+                    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
                 >
-              </p>
-              <!-- <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/nama/">nama</a>
-              </p> -->
-              <p>
-                <strong>Instagram:</strong>
-                <a href="https://www.instagram.com/yogabagus08">@yogabagus08</a>
-              </p>
-              <p><strong>Facebook:</strong> Yoga Bagus</p>
-              <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/yogabagusnurarifin"
-                  >yogabagusnurarifin</a
-                >
-              </p>
+                    <div class="flex justify-center items-center mb-5">
+                        <img
+                            class="rounded-full sm:w-56 sm:h-w-56 ring-4 ring-gray-300 dark:ring-gray-500"
+                            src="dist/img/foto.png"
+                            alt="Foto"
+                            width="200"
+                        />
+                    </div>
+
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                    >
+                        Yoga Bagus Nur Arifin
+                    </h1>
+                    <p
+                        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Teknik Informatika
+                    </p>
+                </div>
             </div>
-          </div>
+        </section>
+        <!-- End Home Section -->
+
+        <!-- About Section -->
+        <section id="about" class="bg-white dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div
+                    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
+                >
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                    >
+                        About Me
+                    </h1>
+                    <p
+                        class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Saya lulusan S-1 Teknik Informatika Universitas PGRI
+                        Madiun. Saya memikili keahlian terkait Hardware,
+                        Software, Website, Data Management, Domain, Hosting.
+                        Mampu bekerja sama dalam tim. saya siap bekerja dibawah
+                        tekanan untuk memenuhi target perusahaan.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- Work Experience Section -->
+        <section id="work-experience" class="bg-slate-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+                    <h1
+                        class="text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                    >
+                        Work Experience
+                    </h1>
+
+                    <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex">
+                            <div
+                                class="flex-auto w-14 p-4 text-gray-500 text-end"
+                            >
+                                <span>Desember 2016 - Maret 2017</span>
+                            </div>
+                            <div
+                                class="flex-auto w-32 p-4 text-gray-500 text-start"
+                            >
+                                <h2
+                                    class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+                                >
+                                    Caesar Laptop Madiun
+                                </h2>
+                                <p>Magang</p>
+                                <ul
+                                    class="pl-5 max-w-md space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400"
+                                >
+                                    <li>Melakukan Perakitan Laptop.</li>
+                                    <li>Melakukan Instalasi Sistem Operasi.</li>
+                                    <li>
+                                        Melakukan Instalasi Software dan
+                                        Troubleshooting.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div
+                                class="flex-auto w-14 p-4 text-gray-500 text-end"
+                            >
+                                <span>Juni 2018 - Agustus 2018</span>
+                            </div>
+                            <div
+                                class="flex-auto w-32 p-4 text-gray-500 text-start"
+                            >
+                                <h2
+                                    class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+                                >
+                                    PT Olean Permata Telematika
+                                </h2>
+                                <p>Karyawan</p>
+                                <ul
+                                    class="pl-5 max-w-md space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400"
+                                >
+                                    <li>
+                                        Melakukan pengetatan besi atau holo.
+                                    </li>
+                                    <li>Melakukan pemasangan kabel speaker.</li>
+                                    <li>
+                                        Melakukan pemasangan jaringan CCTV dan
+                                        Internet.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div
+                                class="flex-auto w-14 p-4 text-gray-500 text-end"
+                            >
+                                <span>Juni 2021 - November 2021</span>
+                            </div>
+                            <div
+                                class="flex-auto w-32 p-4 text-gray-500 text-start"
+                            >
+                                <h2
+                                    class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+                                >
+                                    Pom Mini ADF Petro
+                                </h2>
+                                <p>Pramuniaga</p>
+                                <ul
+                                    class="pl-5 max-w-md space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400"
+                                >
+                                    <li>
+                                        Melayani konsumen dalam pengisian BBM.
+                                    </li>
+                                    <li>
+                                        Melayani konsumen dalam pembelian pulsa,
+                                        token, rokok.
+                                    </li>
+                                    <li>
+                                        Melakukan input laporan hasil penjualan.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div
+                                class="flex-auto w-14 p-4 text-gray-500 text-end"
+                            >
+                                <span>November 2021 - Desember 2021</span>
+                            </div>
+                            <div
+                                class="flex-auto w-32 p-4 text-gray-500 text-start"
+                            >
+                                <h2
+                                    class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+                                >
+                                    Dinas Sosial Kabupaten Madiun
+                                </h2>
+                                <p>Magang</p>
+                                <div>
+                                    <ul
+                                        class="pl-5 max-w-md space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400"
+                                    >
+                                        <li>
+                                            Melakukan perancangan sistem dalam
+                                            membuat website sesuai keinginan
+                                            Dinas.
+                                        </li>
+                                        <li>
+                                            Pembuatan website dalam menunjang
+                                            keefektifitasan kinerja petugas.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Work Experience Section -->
+
+        <!-- Project Section -->
+        <!-- <section id="project" class="bg-white dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div
+                    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
+                >
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                    >
+                        Project
+                    </h1>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <img
+                                class="h-auto max-w-full rounded-lg"
+                                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- End Project Section
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white dark:bg-gray-900">
+            <div class="container mx-auto">
+                <div
+                    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16"
+                >
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+                    >
+                        Skills
+                    </h1>
+                    <p
+                        class="mb-3 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Programming Languages
+                    </p>
+                    <div class="p-4 grid grid-cols-5 gap-2">
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#E65100"
+                                    d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"
+                                ></path>
+                                <path
+                                    fill="#FF6D00"
+                                    d="M24 8L24 39.9 35.2 36.7 37.7 8z"
+                                ></path>
+                                <path
+                                    fill="#FFF"
+                                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"
+                                ></path>
+                                <path
+                                    fill="#EEE"
+                                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"
+                                ></path></svg
+                            ><span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >HTML</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#0277BD"
+                                    d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"
+                                ></path>
+                                <path
+                                    fill="#039BE5"
+                                    d="M24 8L24 39.9 35.2 36.7 37.7 8z"
+                                ></path>
+                                <path
+                                    fill="#FFF"
+                                    d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"
+                                ></path>
+                                <path
+                                    fill="#EEE"
+                                    d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >CSS</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#ffd600"
+                                    d="M6,42V6h36v36H6z"
+                                ></path>
+                                <path
+                                    fill="#000001"
+                                    d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >JavaScript</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <img
+                                src="https://img.icons8.com/color/48/000000/php.png"
+                                alt=""
+                            />
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >PHP</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#00549d"
+                                    fill-rule="evenodd"
+                                    d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z"
+                                    clip-rule="evenodd"
+                                ></path>
+                                <path
+                                    fill="#0086d4"
+                                    fill-rule="evenodd"
+                                    d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z"
+                                    clip-rule="evenodd"
+                                ></path>
+                                <path
+                                    fill="#fff"
+                                    fill-rule="evenodd"
+                                    d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z"
+                                    clip-rule="evenodd"
+                                ></path>
+                                <path
+                                    fill="#0075c0"
+                                    fill-rule="evenodd"
+                                    d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z"
+                                    clip-rule="evenodd"
+                                ></path>
+                                <path
+                                    fill="#fff"
+                                    fill-rule="evenodd"
+                                    d="M31 21H33V27H31zM38 21H40V27H38z"
+                                    clip-rule="evenodd"
+                                ></path>
+                                <path
+                                    fill="#fff"
+                                    fill-rule="evenodd"
+                                    d="M29 23H35V25H29zM36 23H42V25H36z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >C++</span
+                            >
+                        </div>
+                    </div>
+
+                    <p
+                        class="mb-3 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Databases
+                    </p>
+                    <div class="p-4 grid grid-cols-4 gap-2">
+                        <div class="grid justify-items-center"></div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#00796b"
+                                    d="M0.002,35.041h1.92v-7.085l2.667,6.057c0.329,0.755,0.779,1.022,1.662,1.022 s1.315-0.267,1.644-1.022l2.667-5.902v6.93h1.92v-7.258c0-0.697-0.277-1.035-0.849-1.209c-1.367-0.43-2.285-0.059-2.7,0.872 l-2.735,6.16l-2.649-6.16c-0.398-0.93-1.332-1.302-2.7-0.872C0.277,26.748,0,27.085,0,27.782v7.258H0.002z"
+                                ></path>
+                                <path
+                                    fill="#00796b"
+                                    d="M13.441,29.281h1.92v4.055c-0.015,0.2,0.064,0.731,0.99,0.745c0.472,0.008,2.821,0,2.85,0v-4.8h1.92 c0.008,0,0,5.968,0,5.993c0.01,1.472-1.828,1.662-2.673,1.687h-5.006v-0.96c0.01,0,4.787,0.001,4.801,0 c1.088-0.115,0.959-0.714,0.959-0.896v-0.064H16.19c-1.67-0.015-2.735-0.751-2.747-1.59C13.441,33.373,13.479,29.317,13.441,29.281 z"
+                                ></path>
+                                <path
+                                    fill="#f57f17"
+                                    d="M22.081,35.041h4.807c0.63,0,1.242-0.132,1.728-0.36c0.81-0.372,1.144-0.875,1.144-1.536v-1.368 c0-1.476-1.83-1.536-2.88-1.536h-1.92c-0.755,0-0.87-0.456-0.96-0.96v-0.96c0.09-0.384,0.258-0.9,0.923-0.96 c0.773,0,4.836,0,4.836,0v-0.96h-4.566c-0.755,0-3.114,0.09-3.114,1.92v1.187c0,0.84,0.738,1.524,2.34,1.692 c0.18,0.012,0.36,0.024,0.539,0.024c0,0,1.866-0.036,1.92-0.024c1.08,0,0.96,0.84,0.96,0.96v0.96c0,0.132-0.03,0.96-0.971,0.96 c-0.072,0-4.789,0-4.789,0V35.041z"
+                                ></path>
+                                <path
+                                    fill="#f57f17"
+                                    d="M40.32,33.08c0,1.159,0.655,1.809,2.392,1.939c0.162,0.011,0.325,0.021,0.488,0.021H48v-0.96h-4.435 c-0.991,0-1.325-0.416-1.325-1.011v-6.669h-1.92V33.08z"
+                                ></path>
+                                <path
+                                    fill="#f57f17"
+                                    d="M30.704,33.121v-4.8c0-1.02,0.5-1.724,1.916-1.92h0.672h3.447h0.525 c1.416,0.196,2.08,0.899,2.08,1.92v4.782c0,0.827-0.215,1.271-0.916,1.559L39.916,36h-2.16l-1.07-0.96h-1.257l-2.136,0.012 c-0.309,0-0.635-0.043-0.993-0.141C31.226,34.618,30.704,34.054,30.704,33.121z M32.624,33.121c0.098,0.467,0.473,0.96,1.14,0.96 h1.864l-1.068-0.96h2.175l0.519,0.482c0,0,0.186-0.152,0.186-0.482c0-0.33-0.016-4.8-0.016-4.8c-0.098-0.434-0.538-0.96-1.188-0.96 h-2.471c-0.749,0-1.14,0.548-1.14,1.058L32.624,33.121L32.624,33.121z"
+                                ></path>
+                                <path
+                                    fill="#00796b"
+                                    d="M46.199,25.389c-1.031-0.028-1.818,0.068-2.491,0.351c-0.191,0.081-0.496,0.083-0.528,0.323 c0.105,0.11,0.121,0.275,0.205,0.41c0.16,0.26,0.432,0.609,0.674,0.791c0.265,0.2,0.538,0.414,0.821,0.587 c0.504,0.307,1.067,0.483,1.553,0.791c0.286,0.181,0.57,0.411,0.85,0.615c0.138,0.102,0.23,0.259,0.41,0.323 c0-0.01,0-0.019,0-0.029c-0.094-0.12-0.119-0.285-0.205-0.411c-0.127-0.127-0.254-0.254-0.381-0.381 c-0.372-0.494-0.846-0.929-1.348-1.289c-0.401-0.288-1.298-0.677-1.466-1.143c-0.01-0.01-0.019-0.019-0.03-0.03 c0.284-0.032,0.617-0.135,0.879-0.205c0.441-0.118,0.834-0.087,1.289-0.205c0.205-0.059,0.41-0.117,0.615-0.176 c0-0.039,0-0.078,0-0.117c-0.23-0.236-0.395-0.548-0.645-0.762c-0.657-0.559-1.373-1.117-2.11-1.583 c-0.409-0.258-0.915-0.426-1.348-0.645c-0.146-0.074-0.402-0.112-0.498-0.234c-0.228-0.29-0.351-0.659-0.527-0.996 c-0.368-0.708-0.73-1.482-1.055-2.227c-0.223-0.508-0.368-1.01-0.645-1.466c-1.331-2.188-2.764-3.509-4.982-4.807 c-0.472-0.276-1.041-0.385-1.642-0.528c-0.323-0.019-0.645-0.039-0.968-0.059c-0.197-0.083-0.401-0.323-0.587-0.44 c-0.735-0.465-2.621-1.475-3.165-0.147c-0.344,0.838,0.514,1.656,0.821,2.081c0.215,0.298,0.491,0.632,0.645,0.968 c0.101,0.22,0.119,0.441,0.205,0.674c0.213,0.574,0.55,1.228,0.826,1.759c0.139,0.269,0.293,0.551,0.469,0.791 c0.108,0.147,0.293,0.212,0.323,0.44c-0.181,0.253-0.191,0.646-0.293,0.968c-0.458,1.445-0.285,3.24,0.381,4.308 c0.204,0.328,0.686,1.032,1.348,0.762c0.579-0.236,0.45-0.967,0.615-1.612c0.037-0.146,0.014-0.253,0.088-0.351 c0,0.01,0,0.019,0,0.03c0.176,0.351,0.351,0.704,0.528,1.055c0.391,0.629,1.084,1.286,1.67,1.73 c0.304,0.23,0.544,0.628,0.938,0.762c0-0.01,0-0.019,0-0.03c-0.01,0-0.019,0-0.03,0c-0.076-0.119-0.196-0.168-0.293-0.264 c-0.229-0.225-0.485-0.504-0.674-0.762c-0.534-0.725-1.006-1.519-1.436-2.345c-0.205-0.395-0.384-0.829-0.557-1.231 c-0.067-0.155-0.066-0.389-0.205-0.469c-0.19,0.294-0.468,0.532-0.615,0.879c-0.234,0.555-0.265,1.233-0.351,1.934 c-0.052,0.018-0.029,0.006-0.059,0.029c-0.408-0.099-0.552-0.518-0.704-0.879c-0.384-0.912-0.455-2.38-0.117-3.429 c0.087-0.272,0.482-1.127,0.323-1.378c-0.076-0.251-0.328-0.396-0.468-0.587c-0.175-0.236-0.348-0.548-0.469-0.821 c-0.314-0.711-0.612-1.538-0.943-2.257c-0.158-0.344-0.425-0.691-0.645-0.996c-0.243-0.338-0.516-0.587-0.704-0.996 c-0.067-0.145-0.158-0.378-0.059-0.528c0.032-0.101,0.076-0.143,0.176-0.176c0.17-0.132,0.643,0.043,0.821,0.117 c0.47,0.195,0.862,0.381,1.26,0.645c0.191,0.127,0.384,0.372,0.615,0.44c0.088,0,0.176,0,0.264,0 c0.413,0.095,0.875,0.03,1.26,0.147c0.682,0.207,1.292,0.529,1.846,0.879c1.69,1.067,3.071,2.585,4.016,4.397 c0.152,0.292,0.218,0.57,0.351,0.879c0.27,0.624,0.611,1.266,0.879,1.876c0.268,0.609,0.53,1.223,0.909,1.73 c0.2,0.266,0.97,0.409,1.319,0.557c0.245,0.104,0.647,0.211,0.879,0.351c0.444,0.268,0.874,0.587,1.289,0.879 C45.528,24.803,46.167,25.124,46.199,25.389z"
+                                ></path>
+                                <path
+                                    fill="#00796b"
+                                    d="M33.098,14.223c-0.215-0.004-0.367,0.023-0.528,0.059c0,0.01,0,0.019,0,0.03c0.01,0,0.019,0,0.03,0 c0.103,0.21,0.283,0.347,0.41,0.528c0.098,0.205,0.195,0.41,0.293,0.615c0.01-0.01,0.019-0.019,0.029-0.029 c0.181-0.128,0.265-0.332,0.264-0.645c-0.073-0.077-0.084-0.173-0.147-0.264C33.365,14.394,33.203,14.325,33.098,14.223z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >MySQL</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 100 100"
+                            >
+                                <path
+                                    fill="#6e78ac"
+                                    d="M83.242,60.482c-6.349,1.924-9.957-0.415-9.957-0.415s-0.006,0-0.007,0l-0.394-0.488	c0.131-0.117,0.264-0.242,0.4-0.381l0.019-0.017l-0.001-0.002c5.639-5.753,15.838-29.562,9.749-37.378	c-8.553-10.979-25.66-5.745-25.66-5.745l0.064,0.183c-4.889-1.666-9.947-1.625-13.851,0.838c-0.661,0.417-1.273,0.873-1.844,1.357	l0.014-0.187c0,0-8.149-3.213-15.851-2.383c-7.954,0.857-12.319,6.83-12.319,15.83s6.17,30.553,10.17,34.553s6,2,7,1	c0.896-0.896,6.588-7.387,7.771-8.738c2.143,1.4,4.575,1.743,5.983,1.748c-0.184,0.991-1.31,4.988-7.562,5.714	c-2.809,0.447-1.915,2.298,0.128,2.872c2.002,0.563,8.415,1.967,12.335-3.509c-0.052,3.397-0.183,9.771,0.304,15.126	c0.574,6.319,3.983,8.376,6.511,8.713c7.878,1.048,10.628-4.308,11.394-6.702c0.702-2.194,1.839-10.809,2.213-16.588l0.503-0.089	l-0.004,0.05c8.106,1.277,12.734-1.66,14.362-3.191C86.338,61.12,85.349,59.844,83.242,60.482z"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                    d="M39,58c0,0-6.75,7.562-7.75,8.562s-3,3-7-1	s-10.25-25-10.25-34s4.234-15.518,12.188-16.375C33.89,14.358,42,18,42,18"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                    d="M71.213,56.947	c2.681-2.106,2.968-8.713,2.489-12.734c-0.479-4.021,0.331-6.392,0.235-11.275C70.682,19.629,53.612,10.839,43.75,17.062	s-8.854,20.137-8.375,24.062s-2.444,6.539-0.625,12.188s7.644,6.698,10.037,6.698c2.394,0,4.883,0.957,4.883,3.543	s-0.287,10.34,0.287,16.66c0.574,6.319,3.983,8.376,6.511,8.713c7.878,1.048,10.628-4.309,11.394-6.702s2.052-12.439,2.298-18.096	c0.191-4.404,3.351-4.309,3.351-4.309s3.608,2.339,9.957,0.415c2.106-0.638,3.096,0.638,1.468,2.17	c-1.628,1.532-6.017,4.56-14.124,3.283"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                    d="M74.085,33.617c0,0-6.523-2.242-8.71,2.195	c-1.893,3.841,3.987,18.294,8.199,23.592"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                    d="M34.574,36.617c0,0,7.652-4.612,11.801-1.867	S48.936,48.106,47.149,52c-1.787,3.894-2.362,7.787-2.362,7.787s-0.447,5.106-7.596,5.936c-2.809,0.447-1.915,2.298,0.128,2.872	c2.043,0.574,8.681,2.043,12.574-3.83"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                    d="M57.617,15.809	c0,0,17.356-4.174,25.383,5.629c6.553,8.003-4.766,33.882-10.191,38.158"
+                                ></path>
+                                <path
+                                    fill="#1f212b"
+                                    d="M69.154,38.037c-1.652,0.168-3.423-1.939-0.096-2.346C72.177,35.31,71.323,37.817,69.154,38.037z"
+                                ></path>
+                                <path
+                                    fill="#1f212b"
+                                    d="M43.223,38.848c-1.824-0.23-3.212-2.945,0.481-2.556C47.165,36.657,45.619,39.151,43.223,38.848z"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M39.492,27.447	c-0.236,0.688-0.451,1.425-0.641,2.213"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M47.808,18.479	c-2.789,0.876-5.771,2.939-7.731,7.456"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M55.064,18.298	c0,0-2.11-0.621-4.851-0.319"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M20.148,21.817	c-1.921,2.074-3.369,5.451-3.173,10.945"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M28.319,18.553	c0,0-3.417-0.258-6.503,1.833"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M53.549,82.6	c0.649,1.702,1.858,3.266,4.1,3.613"
+                                ></path>
+                                <path
+                                    fill="none"
+                                    stroke="#1f212b"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M52.83,77.596	c0,0-0.095,1.358,0.186,3.001"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >PostgreSql</span
+                            >
+                        </div>
+                    </div>
+
+                    <p
+                        class="mb-3 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Frameworks and Libraries
+                    </p>
+                    <div class="p-4 grid grid-cols-5 gap-2">
+                        <div class="grid justify-items-center">
+                            <img
+                                src="https://img.icons8.com/?size=48&id=r4UrHt1gLC2t&format=png&color=000000"
+                                alt="Codeigniter"
+                            />
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >CodeIgniter
+                            </span>
+                        </div>
+                        <div class="grid justify-items-center">
+                            <img
+                                src="https://img.icons8.com/fluency/48/laravel.png"
+                                alt="Laravel"
+                            />
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Laravel</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#6c19ff"
+                                    d="M6.391,10.671c-0.085-2.448,1.822-4.706,4.401-4.706h26.42c2.578,0,4.486,2.258,4.401,4.706	c-0.082,2.352,0.024,5.398,0.791,7.882c0.769,2.492,2.066,4.067,4.19,4.269v2.295c-2.124,0.202-3.421,1.777-4.19,4.269	c-0.767,2.484-0.873,5.53-0.791,7.882c0.085,2.448-1.822,4.706-4.401,4.706h-26.42c-2.578,0-4.486-2.258-4.4-4.706	c0.082-2.352-0.025-5.398-0.791-7.882c-0.769-2.492-2.069-4.067-4.194-4.269v-2.295c2.124-0.202,3.425-1.777,4.194-4.269	C6.367,16.07,6.473,13.023,6.391,10.671z"
+                                ></path>
+                                <linearGradient
+                                    id="Is-EGaxKcc0Cic9QMqyzGa_EzPCiQUqWWEa_gr1"
+                                    x1="17.846"
+                                    x2="27.078"
+                                    y1="-147.541"
+                                    y2="-163.153"
+                                    gradientTransform="matrix(1 0 0 -1 0 -132)"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0" stop-color="#fff"></stop>
+                                    <stop
+                                        offset="1"
+                                        stop-color="#f1e5fc"
+                                    ></stop>
+                                </linearGradient>
+                                <path
+                                    fill="url(#Is-EGaxKcc0Cic9QMqyzGa_EzPCiQUqWWEa_gr1)"
+                                    d="M25.042,34.016c4.366,0,6.997-2.138,6.997-5.664c0-2.665-1.877-4.595-4.665-4.9v-0.111	c2.048-0.333,3.655-2.235,3.655-4.359c0-3.026-2.389-4.997-6.03-4.997h-8.192v20.031H25.042z M19.994,16.525h4.238	c2.304,0,3.612,1.027,3.612,2.887c0,1.985-1.522,3.096-4.281,3.096h-3.57V16.525z M19.994,31.475v-6.594h4.21	c3.015,0,4.579,1.11,4.579,3.276c0,2.165-1.522,3.318-4.394,3.318H19.994z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Bootstrap</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#00acc1"
+                                    d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >TailwindCSS</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#388e3c"
+                                    d="M17.204 19.122l-4.907 2.715C12.113 21.938 12 22.126 12 22.329v5.433c0 .203.113.39.297.492l4.908 2.717c.183.101.41.101.593 0l4.907-2.717C22.887 28.152 23 27.965 23 27.762v-5.433c0-.203-.113-.39-.297-.492l-4.906-2.715c-.092-.051-.195-.076-.297-.076-.103 0-.205.025-.297.076M42.451 24.013l-.818.452c-.031.017-.049.048-.049.082v.906c0 .034.019.065.049.082l.818.453c.031.017.068.017.099 0l.818-.453c.03-.017.049-.048.049-.082v-.906c0-.034-.019-.065-.05-.082l-.818-.452C42.534 24.004 42.517 24 42.5 24S42.466 24.004 42.451 24.013"
+                                ></path>
+                                <path
+                                    fill="#37474f"
+                                    d="M35.751,13.364l-2.389-1.333c-0.075-0.042-0.167-0.041-0.241,0.003 c-0.074,0.044-0.12,0.123-0.12,0.209L33,20.295l-2.203-1.219C30.705,19.025,30.602,19,30.5,19c-0.102,0-0.205,0.025-0.297,0.076 h0.001l-4.907,2.715C25.113,21.892,25,22.08,25,22.282v5.433c0,0.203,0.113,0.39,0.297,0.492l4.908,2.717 c0.183,0.101,0.41,0.101,0.593,0l4.907-2.717C35.887,28.106,36,27.918,36,27.715V13.788C36,13.612,35.904,13.45,35.751,13.364z M32.866,26.458l-2.23,1.235c-0.083,0.046-0.186,0.046-0.269,0l-2.231-1.235C28.051,26.412,28,26.326,28,26.234v-2.47 c0-0.092,0.051-0.177,0.135-0.224l2.231-1.234h-0.001c0.042-0.023,0.088-0.034,0.135-0.034c0.047,0,0.093,0.012,0.135,0.034 l2.23,1.234C32.949,23.587,33,23.673,33,23.765v2.47C33,26.326,32.949,26.412,32.866,26.458z"
+                                ></path>
+                                <path
+                                    fill="#2e7d32"
+                                    d="M17.204,19.122L12,27.762c0,0.203,0.113,0.39,0.297,0.492l4.908,2.717 c0.183,0.101,0.41,0.101,0.593,0L23,22.329c0-0.203-0.113-0.39-0.297-0.492l-4.906-2.715c-0.092-0.051-0.195-0.076-0.297-0.076 c-0.103,0-0.205,0.025-0.297,0.076"
+                                ></path>
+                                <path
+                                    fill="#4caf50"
+                                    d="M17.204,19.122l-4.907,2.715C12.113,21.938,12,22.126,12,22.329l5.204,8.642 c0.183,0.101,0.41,0.101,0.593,0l4.907-2.717C22.887,28.152,23,27.965,23,27.762l-5.203-8.64c-0.092-0.051-0.195-0.076-0.297-0.076 c-0.103,0-0.205,0.025-0.297,0.076"
+                                ></path>
+                                <path
+                                    fill="#37474f"
+                                    d="M47.703 21.791l-4.906-2.715C42.705 19.025 42.602 19 42.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C37.114 21.892 37 22.084 37 22.294v5.411c0 .209.114.402.297.503l4.908 2.717c.184.102.409.102.593 0l2.263-1.253c.207-.115.206-.412-.002-.526l-4.924-2.687C40.052 26.412 40 26.325 40 26.231v-2.466c0-.092.05-.177.13-.221l2.235-1.236h-.001c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237c.08.044.13.129.13.221v2.012c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393c.148-.086.24-.245.24-.417v-1.88C48 22.085 47.886 21.892 47.703 21.791zM10.703 21.791l-4.906-2.715C5.705 19.025 5.602 19 5.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C.114 21.892 0 22.084 0 22.294v7.465c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393C2.909 28.488 3 28.329 3 28.157v-4.393c0-.092.05-.177.13-.221l2.235-1.236H5.365c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237C7.95 23.588 8 23.673 8 23.765v4.393c0 .172.091.331.24.417l2.398 1.393c.075.043.167.043.242.001C10.954 29.925 11 29.845 11 29.759v-7.464C11 22.085 10.886 21.892 10.703 21.791z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >NodeJS</span
+                            >
+                        </div>
+                    </div>
+
+                    <p
+                        class="mb-3 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+                    >
+                        Tools
+                    </p>
+                    <div class="p-4 grid grid-cols-5 gap-2">
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#fff"
+                                    d="M24 4.050000000000001A19.95 19.95 0 1 0 24 43.95A19.95 19.95 0 1 0 24 4.050000000000001Z"
+                                ></path>
+                                <path
+                                    fill="#01579b"
+                                    d="M8.001,24c0,6.336,3.68,11.806,9.018,14.4L9.385,17.488C8.498,19.479,8.001,21.676,8.001,24z M34.804,23.194c0-1.977-1.063-3.35-1.67-4.412c-0.813-1.329-1.576-2.437-1.576-3.752c0-1.465,1.471-2.84,3.041-2.84 c0.071,0,0.135,0.006,0.206,0.008C31.961,9.584,28.168,8,24.001,8c-5.389,0-10.153,2.666-13.052,6.749 c0.228,0.074,0.307,0.039,0.611,0.039c1.669,0,4.264-0.2,4.264-0.2c0.86-0.057,0.965,1.212,0.099,1.316c0,0-0.864,0.105-1.828,0.152 l5.931,17.778l3.5-10.501l-2.603-7.248c-0.861-0.046-1.679-0.152-1.679-0.152c-0.862-0.056-0.762-1.375,0.098-1.316 c0,0,2.648,0.2,4.217,0.2c1.675,0,4.264-0.2,4.264-0.2c0.861-0.057,0.965,1.212,0.104,1.316c0,0-0.87,0.105-1.832,0.152l5.891,17.61 l1.599-5.326C34.399,26.289,34.804,24.569,34.804,23.194z M24.281,25.396l-4.8,13.952c1.436,0.426,2.95,0.652,4.52,0.652 c1.861,0,3.649-0.324,5.316-0.907c-0.04-0.071-0.085-0.143-0.118-0.22L24.281,25.396z M38.043,16.318 c0.071,0.51,0.108,1.059,0.108,1.645c0,1.628-0.306,3.451-1.219,5.737l-4.885,14.135C36.805,35.063,40,29.902,40,24 C40,21.219,39.289,18.604,38.043,16.318z"
+                                ></path>
+                                <path
+                                    fill="#01579b"
+                                    d="M4,24c0,11.024,8.97,20,19.999,20C35.03,44,44,35.024,44,24S35.03,4,24,4S4,12.976,4,24z M5.995,24 c0-9.924,8.074-17.999,18.004-17.999S42.005,14.076,42.005,24S33.929,42.001,24,42.001C14.072,42.001,5.995,33.924,5.995,24z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >WordPress</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#F4511E"
+                                    d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Git</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <linearGradient
+                                    id="rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1"
+                                    x1="4"
+                                    x2="44"
+                                    y1="23.508"
+                                    y2="23.508"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop
+                                        offset="0"
+                                        stop-color="#4c4c4c"
+                                    ></stop>
+                                    <stop
+                                        offset="1"
+                                        stop-color="#343434"
+                                    ></stop>
+                                </linearGradient>
+                                <path
+                                    fill="url(#rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1)"
+                                    d="M24,4C12.954,4,4,12.954,4,24c0,8.887,5.801,16.411,13.82,19.016h12.36	C38.199,40.411,44,32.887,44,24C44,12.954,35.046,4,24,4z"
+                                ></path>
+                                <path
+                                    d="M30.01,41.996L30,36.198c0-0.939-0.22-1.856-0.642-2.687c5.641-1.133,8.386-4.468,8.386-10.177	c0-2.255-0.665-4.246-1.976-5.92c0.1-0.317,0.174-0.645,0.22-0.981c0.188-1.369-0.023-2.264-0.193-2.984l-0.027-0.116	c-0.186-0.796-0.409-1.364-0.418-1.388l-0.111-0.282l-0.111-0.282l-0.302-0.032l-0.303-0.032c0,0-0.199-0.021-0.501-0.021	c-0.419,0-1.04,0.042-1.627,0.241l-0.196,0.066c-0.74,0.249-1.439,0.485-2.417,1.069c-0.286,0.171-0.599,0.366-0.934,0.584	C27.334,12.881,25.705,12.69,24,12.69c-1.722,0-3.365,0.192-4.889,0.571c-0.339-0.22-0.654-0.417-0.942-0.589	c-0.978-0.584-1.677-0.819-2.417-1.069l-0.196-0.066c-0.585-0.199-1.207-0.241-1.626-0.241c-0.302,0-0.501,0.021-0.501,0.021	l-0.302,0.032l-0.3,0.031l-0.112,0.281l-0.113,0.283c-0.01,0.026-0.233,0.594-0.419,1.391l-0.027,0.115	c-0.17,0.719-0.381,1.615-0.193,2.983c0.048,0.346,0.125,0.685,0.23,1.011c-1.285,1.666-1.936,3.646-1.936,5.89	c0,5.695,2.748,9.028,8.397,10.17c-0.194,0.388-0.345,0.798-0.452,1.224c-0.197,0.067-0.378,0.112-0.538,0.137	c-0.238,0.036-0.487,0.054-0.739,0.054c-0.686,0-1.225-0.134-1.435-0.259c-0.313-0.186-0.872-0.727-1.414-1.518	c-0.463-0.675-1.185-1.558-1.992-1.927c-0.698-0.319-1.437-0.502-2.029-0.502c-0.138,0-0.265,0.01-0.376,0.028	c-0.517,0.082-0.949,0.366-1.184,0.78c-0.203,0.357-0.235,0.773-0.088,1.141c0.219,0.548,0.851,0.985,1.343,1.255	c0.242,0.133,0.765,0.619,1.07,1.109c0.229,0.368,0.335,0.63,0.482,0.992c0.087,0.215,0.183,0.449,0.313,0.732	c0.47,1.022,1.937,1.924,2.103,2.023c0.806,0.483,2.161,0.638,3.157,0.683l0.123,0.003c0,0,0.001,0,0.001,0	c0.24,0,0.57-0.023,1.004-0.071v2.613c0.002,0.529-0.537,0.649-1.25,0.638l0.547,0.184C19.395,43.572,21.645,44,24,44	c2.355,0,4.605-0.428,6.703-1.176l0.703-0.262C30.695,42.538,30.016,42.422,30.01,41.996z"
+                                    opacity=".05"
+                                ></path>
+                                <path
+                                    d="M30.781,42.797c-0.406,0.047-1.281-0.109-1.281-0.795v-5.804c0-1.094-0.328-2.151-0.936-3.052	c5.915-0.957,8.679-4.093,8.679-9.812c0-2.237-0.686-4.194-2.039-5.822c0.137-0.365,0.233-0.75,0.288-1.147	c0.175-1.276-0.016-2.086-0.184-2.801l-0.027-0.116c-0.178-0.761-0.388-1.297-0.397-1.319l-0.111-0.282l-0.303-0.032	c0,0-0.178-0.019-0.449-0.019c-0.381,0-0.944,0.037-1.466,0.215l-0.196,0.066c-0.714,0.241-1.389,0.468-2.321,1.024	c-0.332,0.198-0.702,0.431-1.101,0.694C27.404,13.394,25.745,13.19,24,13.19c-1.762,0-3.435,0.205-4.979,0.61	c-0.403-0.265-0.775-0.499-1.109-0.699c-0.932-0.556-1.607-0.784-2.321-1.024l-0.196-0.066c-0.521-0.177-1.085-0.215-1.466-0.215	c-0.271,0-0.449,0.019-0.449,0.019l-0.302,0.032l-0.113,0.283c-0.009,0.022-0.219,0.558-0.397,1.319l-0.027,0.116	c-0.169,0.715-0.36,1.524-0.184,2.8c0.056,0.407,0.156,0.801,0.298,1.174c-1.327,1.62-1.999,3.567-1.999,5.795	c0,5.703,2.766,8.838,8.686,9.806c-0.395,0.59-0.671,1.255-0.813,1.964c-0.33,0.13-0.629,0.216-0.891,0.256	c-0.263,0.04-0.537,0.06-0.814,0.06c-0.69,0-1.353-0.129-1.69-0.329c-0.44-0.261-1.057-0.914-1.572-1.665	c-0.35-0.51-1.047-1.417-1.788-1.755c-0.635-0.29-1.298-0.457-1.821-0.457c-0.11,0-0.21,0.008-0.298,0.022	c-0.366,0.058-0.668,0.252-0.828,0.534c-0.128,0.224-0.149,0.483-0.059,0.708c0.179,0.448,0.842,0.85,1.119,1.002	c0.335,0.184,0.919,0.744,1.254,1.284c0.251,0.404,0.37,0.697,0.521,1.067c0.085,0.209,0.178,0.437,0.304,0.712	c0.331,0.719,1.353,1.472,1.905,1.803c0.754,0.452,2.154,0.578,2.922,0.612l0.111,0.002c0.299,0,0.8-0.045,1.495-0.135v3.177	c0,0.779-0.991,0.81-1.234,0.81c-0.031,0,0.503,0.184,0.503,0.184C19.731,43.64,21.822,44,24,44c2.178,0,4.269-0.36,6.231-1.003	C30.231,42.997,30.812,42.793,30.781,42.797z"
+                                    opacity=".07"
+                                ></path>
+                                <path
+                                    fill="#fff"
+                                    d="M36.744,23.334c0-2.31-0.782-4.226-2.117-5.728c0.145-0.325,0.296-0.761,0.371-1.309	c0.172-1.25-0.031-2-0.203-2.734s-0.375-1.25-0.375-1.25s-0.922-0.094-1.703,0.172s-1.453,0.469-2.422,1.047	c-0.453,0.27-0.909,0.566-1.27,0.806C27.482,13.91,25.785,13.69,24,13.69c-1.801,0-3.513,0.221-5.067,0.652	c-0.362-0.241-0.821-0.539-1.277-0.811c-0.969-0.578-1.641-0.781-2.422-1.047s-1.703-0.172-1.703-0.172s-0.203,0.516-0.375,1.25	s-0.375,1.484-0.203,2.734c0.077,0.562,0.233,1.006,0.382,1.333c-1.31,1.493-2.078,3.397-2.078,5.704	c0,5.983,3.232,8.714,9.121,9.435c-0.687,0.726-1.148,1.656-1.303,2.691c-0.387,0.17-0.833,0.33-1.262,0.394	c-1.104,0.167-2.271,0-2.833-0.333s-1.229-1.083-1.729-1.813c-0.422-0.616-1.031-1.331-1.583-1.583	c-0.729-0.333-1.438-0.458-1.833-0.396c-0.396,0.063-0.583,0.354-0.5,0.563c0.083,0.208,0.479,0.521,0.896,0.75	c0.417,0.229,1.063,0.854,1.438,1.458c0.418,0.674,0.5,1.063,0.854,1.833c0.249,0.542,1.101,1.219,1.708,1.583	c0.521,0.313,1.562,0.491,2.688,0.542c0.389,0.018,1.308-0.096,2.083-0.206v3.75c0,0.639-0.585,1.125-1.191,1.013	C19.756,43.668,21.833,44,24,44c2.166,0,4.243-0.332,6.19-0.984C29.585,43.127,29,42.641,29,42.002v-5.804	c0-1.329-0.527-2.53-1.373-3.425C33.473,32.071,36.744,29.405,36.744,23.334z M11.239,32.727c-0.154-0.079-0.237-0.225-0.185-0.328	c0.052-0.103,0.22-0.122,0.374-0.043c0.154,0.079,0.237,0.225,0.185,0.328S11.393,32.806,11.239,32.727z M12.451,33.482	c-0.081,0.088-0.255,0.06-0.389-0.062s-0.177-0.293-0.096-0.381c0.081-0.088,0.255-0.06,0.389,0.062S12.532,33.394,12.451,33.482z M13.205,34.732c-0.102,0.072-0.275,0.005-0.386-0.15s-0.118-0.34-0.016-0.412s0.275-0.005,0.386,0.15	C13.299,34.475,13.307,34.66,13.205,34.732z M14.288,35.673c-0.069,0.112-0.265,0.117-0.437,0.012s-0.256-0.281-0.187-0.393	c0.069-0.112,0.265-0.117,0.437-0.012S14.357,35.561,14.288,35.673z M15.312,36.594c-0.213-0.026-0.371-0.159-0.353-0.297	c0.017-0.138,0.204-0.228,0.416-0.202c0.213,0.026,0.371,0.159,0.353,0.297C15.711,36.529,15.525,36.62,15.312,36.594z M16.963,36.833c-0.227-0.013-0.404-0.143-0.395-0.289c0.009-0.146,0.2-0.255,0.427-0.242c0.227,0.013,0.404,0.143,0.395,0.289	C17.381,36.738,17.19,36.846,16.963,36.833z M18.521,36.677c-0.242,0-0.438-0.126-0.438-0.281s0.196-0.281,0.438-0.281	c0.242,0,0.438,0.126,0.438,0.281S18.762,36.677,18.521,36.677z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Github</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <path
+                                    fill="#6a1b9a"
+                                    d="M36,5L17,21.5L7,14l-3,1.25v17.5L7,34l10-7.5L36,43l8-3V8L36,5z M8,20l5,4l-5,4V20z M24,24l10-7v14 L24,24z"
+                                ></path>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Visual Studio Code</span
+                            >
+                        </div>
+                        <div class="grid justify-items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="48"
+                                height="48"
+                                viewBox="0 0 48 48"
+                            >
+                                <defs>
+                                    <linearGradient
+                                        id="NX4qzaRknlkLIGuB5rRvAa_6RHskkZGRABM_gr1"
+                                        x1="19.639"
+                                        x2="28.361"
+                                        y1="3.481"
+                                        y2="44.519"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop
+                                            offset="0"
+                                            stop-color="#636363"
+                                        ></stop>
+                                        <stop
+                                            offset="1"
+                                            stop-color="#444"
+                                        ></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        id="NX4qzaRknlkLIGuB5rRvAb_6RHskkZGRABM_gr2"
+                                        x1="13"
+                                        x2="35"
+                                        y1="30.684"
+                                        y2="30.684"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop
+                                            offset="0"
+                                            stop-color="#ff9c0f"
+                                        ></stop>
+                                        <stop
+                                            offset=".813"
+                                            stop-color="#d67e00"
+                                        ></stop>
+                                    </linearGradient>
+                                </defs>
+                                <g data-name="Ð¡Ð»Ð¾Ð¹ 2">
+                                    <rect
+                                        width="36"
+                                        height="36"
+                                        x="6"
+                                        y="6"
+                                        fill="url(#NX4qzaRknlkLIGuB5rRvAa_6RHskkZGRABM_gr1)"
+                                        rx="2"
+                                    ></rect>
+                                    <path
+                                        fill="#1d1d1b"
+                                        d="M14,39a2,2,0,0,1-2-2V31.1A2.5,2.5,0,0,1,13.4,28.825L19.131,27,13.4,25.175A1.993,1.993,0,0,1,12,23.269V16.731A1.993,1.993,0,0,1,13.4,14.825L33.4,8.1A2,2,0,0,1,36,10v6.265a1.993,1.993,0,0,1-1.4,1.906L28.869,20,34.6,21.825A1.993,1.993,0,0,1,36,23.731v6.538a1.993,1.993,0,0,1-1.4,1.906l-20,6.732A2,2,0,0,1,14,39ZM34,10,14,16.731v6.538L25.727,27,14,31.1V37l20-6.732V23.731L22.273,20,34,16.269Z"
+                                        opacity=".05"
+                                    ></path>
+                                    <path
+                                        d="M14,38.5A1.5,1.5,0,0,1,12.5,37V31.1a1.494,1.494,0,0,1,1.046-1.43L20.779,27l-7.233-2.3A1.493,1.493,0,0,1,12.5,23.269V16.731A1.493,1.493,0,0,1,13.546,15.3l20-6.728A1.5,1.5,0,0,1,35.5,10v6.265A1.493,1.493,0,0,1,34.454,17.7L27.221,20l7.233,2.3A1.493,1.493,0,0,1,35.5,23.731v6.538A1.493,1.493,0,0,1,34.454,31.7l-20,6.732A1.486,1.486,0,0,1,14,38.5ZM33.7,9.051l.152.476-20,6.728a.5.5,0,0,0-.349.476v6.538a.5.5,0,0,0,.349.476L24.078,27,13.849,30.623a.5.5,0,0,0-.349.477V37a.5.5,0,0,0,.205.4.489.489,0,0,0,.446.073l20-6.732a.5.5,0,0,0,.349-.476V23.731a.5.5,0,0,0-.349-.476L23.922,20l10.229-3.255a.5.5,0,0,0,.349-.476V10a.5.5,0,0,0-.651-.477Z"
+                                        opacity=".07"
+                                    ></path>
+                                    <path
+                                        fill="url(#NX4qzaRknlkLIGuB5rRvAb_6RHskkZGRABM_gr2)"
+                                        d="M34.3,31.222l-20,6.732A1,1,0,0,1,13,37V31.1a1,1,0,0,1,.7-.952l20-6.732a1,1,0,0,1,1.3.953v5.9A1,1,0,0,1,34.3,31.222Z"
+                                    ></path>
+                                    <path
+                                        fill="#ff9c0f"
+                                        d="M33.7,9.051l-20,6.727a1,1,0,0,0-.7.953v6.538a1,1,0,0,0,.7.953l21.061,6.7a1.162,1.162,0,0,0,.216-.423A2.867,2.867,0,0,0,35,29.962V23.731a1,1,0,0,0-.7-.953L25.571,20,34.3,17.222a1,1,0,0,0,.7-.953V10A1,1,0,0,0,33.7,9.051Z"
+                                    ></path>
+                                </g>
+                            </svg>
+                            <span
+                                class="text-md font-normal text-gray-500 dark:text-gray-400"
+                                >Sublime Text</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Skill Section -->
+
+        <!-- Contact Section -->
+        <footer id="contact" class="bg-gray-900 pt-12 pb-12">
+            <div class="container">
+                <h1
+                    class="pb-5 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white text-center"
+                >
+                    Contact
+                </h1>
+                <div class="flex flex-wrap">
+                    <div
+                        class="mb-12 w-11/12 px-4 font-medium text-slate-300 md:w-1/3"
+                    >
+                        <h2 class="mb-5 text-4xl font-bold text-white">
+                            Yoga Bagus
+                        </h2>
+                        <h2 class="mb-5 text-4xl font-bold text-white">
+                            Nur Arifin
+                        </h2>
+                        <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
+                        <p>yogabagusnurarifin@gmail.com</p>
+                    </div>
+                    <div class="mb-12 w-11/12 px-4 md:w-1/3">
+                        <h3 class="mb-5 text-xl font-semibold text-white">
+                            Kategori Tulisan
+                        </h3>
+                        <ul class="text-slate-300">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Programming</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Teknologi</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Gaya Hidup</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-12 w-11/12 px-4 md:w-1/3">
+                        <h3 class="mb-5 text-xl font-semibold text-white">
+                            Tautan
+                        </h3>
+                        <ul class="text-slate-300">
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Tentang Saya</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#contact"
+                                    class="mb-3 inline-block text-base hover:text-primary"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full border-t border-slate-700 pt-10">
+                    <div class="mb-5 flex items-center justify-center">
+                        <!-- Instagram -->
+                        <a
+                            href="https://instagram.com/yogabagus08"
+                            target="_blank"
+                            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                            <svg
+                                role="img"
+                                width="20"
+                                class="fill-current"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title>Instagram</title>
+                                <path
+                                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a
+                            href="https://facebook.com/yoga.bagusnurarifin.3"
+                            target="_blank"
+                            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                            <svg
+                                role="img"
+                                width="20"
+                                class="fill-current"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title>Facebook</title>
+                                <path
+                                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a
+                            href="https://linkedin.com/in/yoga-bagus-nur-arifin-0a82a4314"
+                            target="_blank"
+                            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                            <svg
+                                role="img"
+                                width="20"
+                                class="fill-current"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title>LinkedIn</title>
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Github -->
+                        <a
+                            href="https://github.com/yogabagusnurarifin"
+                            target="_blank"
+                            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                            <svg
+                                role="img"
+                                width="20"
+                                class="fill-current"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title>GitHub</title>
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a
+                            href="mailto:yogabagusnurarifin@gmail.com"
+                            target="_blank"
+                            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                        >
+                            <svg
+                                role="img"
+                                width="20"
+                                class="fill-current"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-center text-xs font-medium text-slate-500">
+                        Dibuat oleh
+                        <a
+                            href="https://instagram.com/yogabagus08"
+                            target="_blank"
+                            class="font-bold text-primary-500"
+                            >Yoga Bagus</a
+                        >, menggunakan
+                        <a
+                            href="https://tailwindcss.com"
+                            target="_blank"
+                            class="font-bold text-sky-500"
+                            >Tailwind CSS</a
+                        >.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Contact Section -->
+
+        <!-- Toggle Dark Mode -->
+        <div data-dial-init class="fixed end-6 bottom-6 group">
+            <button
+                id="theme-toggle"
+                type="button"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 fix"
+            >
+                <svg
+                    id="theme-toggle-light-icon"
+                    class="hidden w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                </svg>
+                <svg
+                    id="theme-toggle-dark-icon"
+                    class="hidden w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
         </div>
-      </div>
-    </section>
-    <!-- Akhir Contact -->
-
-    <!-- Footer -->
-    <!-- <footer class="bg-dark text-white text-center pb-5">
-      <p>
-        Created with <i class="bi bi-heart-fill text-danger"></i> by
-        <a href="https://www.instagram.com/" class="text-white fw-bold"
-          >Yoga Bagus</a
-        >
-      </p>
-    </footer> -->
-    <!-- Akhir Footer -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      (function () {
-        const htmlElement = document.querySelector("html");
-        if (htmlElement.getAttribute("data-bs-theme") === "auto") {
-          function updateTheme() {
-            document
-              .querySelector("html")
-              .setAttribute(
-                "data-bs-theme",
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-                  ? "dark"
-                  : "light"
-              );
-          }
-          window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", updateTheme);
-          updateTheme();
-        }
-      })();
-    </script>
-  </body>
+        <!--  -->
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="dist/js/script.js"></script>
 </html>

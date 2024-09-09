@@ -1,0 +1,19 @@
+{
+    "name": "portofolio",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npx tailwindcss -i ./src/input.css -o ./dist/css/style.css --watch",
+        "minify": "npx tailwindcss -o ./dist/css/style-minify.css --minify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "tailwindcss": "^3.4.10"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.20"
+    }
+}
